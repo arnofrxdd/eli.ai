@@ -107,23 +107,23 @@ export const AiService = {
 
     getDemoContent: (audience: string) => {
         const demoData: Record<string, string> = {
-            '5yo': `## 🌟 The Big Idea
-This is a demo mode! ELI.ai normally uses super-smart AI to explain things, but right now it's in showcase mode.
+            '5yo': `## 🌟 The Magic Robot is Napping!
+Right now, ELI.ai is like a toy robot that is taking a little nap. It needs a special **"Magic Spark"** to wake up and start telling you stories!
 
 ## 🎈 Fun Details
-- Imagine a robot that can speak 5 languages at once!
-- If you were running this locally with an **API Key**, you'd see real magic.
-- Each persona has its own special look and feel.
+- Normally, the AI is like a giant library that knows EVERYTHING!
+- To see the real magic, you have to find the secret **API Key**.
+- It's like finding a gold coin in a treasure chest!
 
 ## 🍭 Magic Words
-- **API Key**: A secret password that lets the AI talk to us.
-- **Localhost**: Your own computer's private playground.
+- **Demo Mode**: This is like a "pretend" world where the robot is still dreaming.
+- **API Key**: The magic key that opens the robot's brain!
 
 ## 🎮 Try This!
-Open the code and add your own Groq API key to the .env file to see the AI come to life!
+Ask a grown-up to help you find the **Groq API Key** and put it in the secret box (the .env file)! Then it will wake up with a ZAP! ⚡
 
 ## ❓ One Big Question
-What would you ask a robot if it could explain anything in the world?`,
+If you were a magic robot, what would be your favorite thing to talk about?`,
 
             'senior': `## The Daily Insight
 You are currently viewing ELI.ai in **Instructional Demo Mode**. This state activates when no valid Groq API key is detected in the environment configuration.
