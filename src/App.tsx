@@ -122,20 +122,20 @@ export default function ExplainApp() {
       <div className="w-full max-w-4xl mx-auto z-20">
 
         {/* HEADER */}
-        <div className="text-center mb-2 mt-2 relative">
-          <div className="flex justify-center mb-1 transition-transform duration-500 hover:scale-110 cursor-default opacity-50">{currentTheme.icon}</div>
+        <div className="text-center mb-4 md:mb-6 mt-2 md:mt-4 relative">
+          <div className="flex justify-center mb-2 md:mb-4 transition-transform duration-500 hover:scale-110 cursor-default opacity-40">{currentTheme.icon}</div>
 
-          <div className="relative min-h-[4rem] mb-0 flex justify-center items-center">
+          <div className="relative min-h-[10rem] md:min-h-[8rem] mb-4 md:mb-2 flex justify-center items-center">
             {AUDIENCES.map((aud) => (
               <div
                 key={aud.id}
-                className={`absolute w-full transition-all duration-700 transform flex justify-center items-center ${audience === aud.id
+                className={`absolute w-full transition-all duration-700 transform flex justify-center items-center px-4 ${audience === aud.id
                   ? 'opacity-100 translate-y-0 scale-100 blur-0'
-                  : 'opacity-0 translate-y-2 scale-95 blur-md pointer-events-none'
+                  : 'opacity-0 translate-y-8 scale-95 blur-md pointer-events-none'
                   }`}
               >
-                <h1 className={`text-3xl md:text-5xl leading-tight py-1 ${THEMES[aud.id].title}`}>
-                  {aud.id === '5yo' ? 'Explain Like I\'m 5!' :
+                <h1 className={`text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-black leading-[0.9] md:leading-tight py-1 transition-all ${THEMES[aud.id].title}`}>
+                  {aud.id === '5yo' ? "Explain Like I'm 5!" :
                     aud.id === 'senior' ? 'The Daily Explainer' :
                       aud.id === 'ceo' ? 'Strategic Briefing' :
                         aud.id === 'genz' ? 'THE VIBE CHECK' :
@@ -181,12 +181,12 @@ export default function ExplainApp() {
             }`}
         >
           {results[audience].text && !results[audience].loading && (
-            <div className={`p-6 md:p-12 rounded-[2.5rem] shadow-2xl transition-all duration-700 ${currentTheme.resultsBg}`}>
+            <div className={`p-4 md:p-12 rounded-[1.5rem] md:rounded-[2.5rem] shadow-2xl transition-all duration-700 ${currentTheme.resultsBg}`}>
               {/* Action Row when Result is Present */}
-              <div className="flex justify-between items-center mb-6 border-b border-black/5 pb-4">
+              <div className="flex justify-between items-center mb-4 md:mb-6 border-b border-black/5 pb-2 md:pb-4">
                 <button
                   onClick={handleClear}
-                  className={`group relative z-50 flex items-center gap-2 font-black uppercase text-[10px] px-4 py-2 rounded-full transition-all tracking-widest ${audience === '5yo' ? 'bg-pink-400 text-white shadow-[0_4px_0_#be185d]' :
+                  className={`group relative z-50 flex items-center gap-2 font-black uppercase text-[10px] px-3 md:px-4 py-1.5 md:py-2 rounded-full transition-all tracking-widest ${audience === '5yo' ? 'bg-pink-400 text-white shadow-[0_4px_0_#be185d]' :
                     audience === 'senior' ? 'bg-stone-800 text-[#FEFEFA]' :
                       audience === 'ceo' ? 'bg-indigo-600 text-white' :
                         audience === 'genz' ? 'bg-[#ccff00] text-black border-2 border-black shadow-[4px_4px_0_black]' :
@@ -196,7 +196,6 @@ export default function ExplainApp() {
                   <ArrowRight className="rotate-180 transition-transform group-hover:-translate-x-1" size={12} />
                   <span className="relative z-10">New Insight</span>
                 </button>
-
               </div>
 
               {/* RENDERERS */}
@@ -207,6 +206,14 @@ export default function ExplainApp() {
                 {audience === 'genz' && <NeoBrutalistRenderer content={results[audience].text!} />}
                 {audience === 'academic' && <AcademicRenderer content={results[audience].text!} />}
               </div>
+            </div>
+          )}
+
+          {results[audience].error && (
+            <div className="p-8 rounded-3xl bg-red-50 border-2 border-red-100 text-red-600 text-center animate-bounce-in">
+              <p className="font-bold mb-2">Oops! Something went sideways.</p>
+              <p className="text-sm opacity-80">{results[audience].error}</p>
+              <button onClick={handleExplain} className="mt-4 px-4 py-2 bg-red-600 text-white rounded-full text-xs font-bold uppercase tracking-widest hover:bg-red-700 transition-colors">Try again</button>
             </div>
           )}
         </div>

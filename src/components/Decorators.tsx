@@ -33,9 +33,9 @@ export const VibeDecor = () => (
         <div className="absolute top-[40%] left-[30%] w-[40%] h-[40%] bg-indigo-500 opacity-[0.15] rounded-full blur-[100px] animate-pulse mix-blend-overlay"></div>
         <div className="absolute bottom-[10%] right-[10%] w-[50%] h-[50%] bg-[#ff3e00] opacity-[0.2] rounded-full blur-[120px] animate-[pulse_10s_infinite_reverse] mix-blend-plus-lighter"></div>
         <div className="absolute inset-0 opacity-[0.12] mix-blend-overlay pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg, #000 0px, #000 1px, transparent 1px, transparent 3px)' }}></div>
-        <div className="absolute top-[10%] right-[5%] text-[15vw] font-black text-white/[0.04] select-none -rotate-12 tracking-tighter italic leading-none whitespace-nowrap uppercase">no cap</div>
-        <div className="absolute bottom-[15%] left-[2%] text-[12vw] font-black text-[#ccff00]/[0.03] select-none rotate-3 tracking-tighter leading-none whitespace-nowrap uppercase italic">vibe check</div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[40vw] font-extrabold text-[#ff00ff]/[0.015] select-none pointer-events-none uppercase italic tracking-widest leading-none">BET</div>
+        <div className="absolute top-[10%] right-[10%] text-[10vw] font-black text-white/[0.03] select-none -rotate-12 tracking-tighter italic leading-none whitespace-nowrap uppercase">no cap</div>
+        <div className="absolute bottom-[20%] left-[5%] text-[8vw] font-black text-[#ccff00]/[0.02] select-none rotate-3 tracking-tighter leading-none whitespace-nowrap uppercase italic">vibe check</div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[30vw] font-extrabold text-[#ff00ff]/[0.01] select-none pointer-events-none uppercase italic tracking-widest leading-none">BET</div>
     </div>
 );
 

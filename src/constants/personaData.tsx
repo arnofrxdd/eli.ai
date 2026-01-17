@@ -54,7 +54,7 @@ export const THEMES: Record<AudienceId, Theme> = {
         bgPattern: 'linear-gradient(rgba(204,255,0,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(204,255,0,0.05) 1px, transparent 1px)',
         bgSize: '40px 40px',
         font: 'Outfit, sans-serif',
-        title: 'text-[#ccff00] font-[1000] uppercase tracking-[-0.05em] text-7xl italic leading-[0.8] drop-shadow-[0_0_15px_rgba(204,255,0,0.5)]',
+        title: 'text-[#ccff00] font-[1000] uppercase tracking-[-0.05em] text-4xl sm:text-5xl md:text-7xl italic leading-[0.85] drop-shadow-[0_0_15px_rgba(204,255,0,0.5)]',
         desc: 'bg-gradient-to-r from-[#ccff00] to-[#00ffff] text-black font-black px-4 py-1 text-sm uppercase skew-x-[-15deg] inline-block mt-8 shadow-[4px_4px_0_#ff00ff]',
         resultsBg: 'bg-black border-4 border-[#ccff00] shadow-[12px_12px_0_#ff00ff]',
         icon: <Zap className="text-[#ccff00] drop-shadow-[0_0_10px_#ccff00]" size={42} />,
